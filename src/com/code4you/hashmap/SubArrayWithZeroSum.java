@@ -8,8 +8,10 @@ public class SubArrayWithZeroSum {
     public static void main(String[] args) {
         int[] numbers =
                 //{1,4,13,-3,-10,5};
-                {3,1,-2,5,6};
+                //{3,1,-2,5,6};
+                {-1,4,-3,5,1};
         System.out.println(isSubArrayExistWithZeroSum(numbers));
+
     }
     private static boolean isSubArrayExistWithZeroSum(int[] numbers){
         int pre_sum = 0;
@@ -17,7 +19,7 @@ public class SubArrayWithZeroSum {
 
         for(int number : numbers){
             pre_sum+=number;
-            if(integerSet.contains(pre_sum) || pre_sum==0){
+            if(integerSet.contains(pre_sum)|| pre_sum==0){
                 return true;
             }else{
                 integerSet.add(pre_sum);
